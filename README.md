@@ -1,2 +1,51 @@
 # 3d2smpl
-fit smpl parameters model using 3D joints
+fit SMPL model using 3D joints
+
+## Prerequisites
+We have tested the code on Ubuntu 18.04/20.04 with CUDA 10.2/11.3
+
+## Installation
+First you have to make sure that you have all dependencies in place.
+The simplest way to do is to use the [anaconda](https://www.anaconda.com/).
+
+You can create an anaconda environment called `fit3d` using
+```
+conda env create -f environment.yaml
+conda activate fit3d
+```
+
+## Download SMPL models
+Download [SMPL Female and Male](https://smpl.is.tue.mpg.de/) and [SMPL Netural](https://smplify.is.tue.mpg.de/), and rename the files and extract them to `<current directory>/smpl_models/smpl/`, eventually, the `<current directory>/smpl_models` folder should have the following structure:
+   ```
+   smpl_models
+    └-- smpl
+    	└-- SMPL_FEMALE.pkl
+		└-- SMPL_MALE.pkl
+		└-- SMPL_NEUTRAL.pkl
+   ```   
+
+## Demo
+### Demo for sequences
+python generate_pt.py --filename ./demo/demo_pt/00010805.ply --gender female
+
+## Citation
+If you find this project useful for your research, please consider citing:
+```
+@article{zuo2020sparsefusion,
+  title={Sparsefusion: Dynamic human avatar modeling from sparse rgbd images},
+  author={Zuo, Xinxin and Wang, Sen and Zheng, Jiangbin and Yu, Weiwei and Gong, Minglun and Yang, Ruigang and Cheng, Li},
+  journal={IEEE Transactions on Multimedia},
+  volume={23},
+  pages={1617--1629},
+  year={2020}
+}
+```
+
+## References
+We indicate if a function or script is borrowed externally inside each file. Here are some great resources we 
+benefit:
+
+- Shape/Pose prior and some functions are borrowed from [VIBE](https://github.com/mkocabas/VIBE).
+- SMPL models and layer is from [SMPL-X model](https://github.com/vchoutas/smplx).
+- Some functions are borrowed from [HMR-pytorch](https://github.com/MandyMo/pytorch_HMR).
+- Some functions are borrowed from [pointnet-pytorch](https://github.com/yanx27/Pointnet_Pointnet2_pytorch).
