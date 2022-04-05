@@ -20,13 +20,13 @@ Download [SMPL Female and Male](https://smpl.is.tue.mpg.de/) and [SMPL Netural](
    smpl_models
     └-- smpl
     	└-- SMPL_FEMALE.pkl
-		└-- SMPL_MALE.pkl
-		└-- SMPL_NEUTRAL.pkl
+	└-- SMPL_MALE.pkl
+	└-- SMPL_NEUTRAL.pkl
    ```   
 
 ## Demo
 ### Demo for sequences
-python generate_pt.py --filename ./demo/demo_pt/00010805.ply --gender female
+python fit_seq.py --files test_motion2.npy
 
 ## Citation
 If you find this project useful for your research, please consider citing:
