@@ -1,4 +1,4 @@
-# 3d2smpl
+# joints2smpl
 fit SMPL model using 3D joints
 
 ## Prerequisites
