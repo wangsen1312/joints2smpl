@@ -48,4 +48,3 @@ benefit:
 - Shape/Pose prior and some functions are borrowed from [VIBE](https://github.com/mkocabas/VIBE).
 - SMPL models and layer is from [SMPL-X model](https://github.com/vchoutas/smplx).
 - Some functions are borrowed from [HMR-pytorch](https://github.com/MandyMo/pytorch_HMR).
-- Some functions are borrowed from [pointnet-pytorch](https://github.com/yanx27/Pointnet_Pointnet2_pytorch).
