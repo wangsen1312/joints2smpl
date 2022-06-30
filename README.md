@@ -33,13 +33,13 @@ The results will locate in ./demo/demo_results/
 ## Citation
 If you find this project useful for your research, please consider citing:
 ```
-@article{zuo2020sparsefusion,
+@article{zuo2021sparsefusion,
   title={Sparsefusion: Dynamic human avatar modeling from sparse rgbd images},
   author={Zuo, Xinxin and Wang, Sen and Zheng, Jiangbin and Yu, Weiwei and Gong, Minglun and Yang, Ruigang and Cheng, Li},
   journal={IEEE Transactions on Multimedia},
   volume={23},
   pages={1617--1629},
-  year={2020}
+  year={2021}
 }
 ```
 
