@@ -27,6 +27,7 @@ Download [SMPL Female and Male](https://smpl.is.tue.mpg.de/) and [SMPL Netural](
 ## Demo
 ### Demo for sequences
 python fit_seq.py --files test_motion2.npy
+
 The results will locate in ./demo/demo_results/
 
 ## Citation
