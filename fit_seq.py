@@ -80,7 +80,7 @@ if not os.path.isdir(dir_save):
 num_seqs = data.shape[0]
 
 for idx in range(num_seqs):
-	#print(idx)
+	print(f"idx={idx}")
 
 	joints3d = data[idx] #*1.2 #scale problem [check first]	
 	keypoints_3d[0, :, :] = torch.Tensor(joints3d).to(device).float()
@@ -128,4 +128,11 @@ for idx in range(num_seqs):
 	param['beta'] = new_opt_betas.detach().cpu().numpy()
 	param['pose'] = new_opt_pose.detach().cpu().numpy()
 	param['cam'] = new_opt_cam_t.detach().cpu().numpy()
+	
+	# save the root position
+	# shape of keypoints_3d is torch.Size([1, 22, 3]) and root is the first one
+	root_position = keypoints_3d[0, 0, :].detach().cpu().numpy()
+	print(f"root at {root_position}, shape of keypoints_3d is {keypoints_3d.shape}")
+	param['root'] = root_position
+	
 	joblib.dump(param, dir_save + "/" + "%04d"%idx + ".pkl", compress=3)
